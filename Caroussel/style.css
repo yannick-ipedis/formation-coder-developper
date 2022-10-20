@@ -38,7 +38,18 @@ main{
 .slick-current {
     opacity: 1;
 }
-.sr-only{
+.slick-disabled{
+    cursor:default;
+    pointer-events:none;
+    opacity:0.5;
+}
+.text-content{
+    padding: 20px;
+}
+.slide{
+    border:1px solid black;
+}
+.sr-only, .sr-only-active{
     position: absolute;
     width: 1px;
     height: 1px;
@@ -87,4 +98,25 @@ main{
 .bt-navigation.prev:before {
 	left: 0.25em;
 	transform: rotate(-135deg);
+}
+.dot-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dot-container ul li{
+    list-style:none;
+    display:inline;
+}
+.dot-container ul li button{
+    background: lightgrey;
+    border:2px solid black;
+    border-radius:45px;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    cursor: pointer;
+}
+.dot-container ul li button.active{
+    background: black;
 }
