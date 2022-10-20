@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Formulaire Accessible</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Contactez-nous</h1>
+        <form class="signup-form" action="#" id="signup-form" method="get">
+
+            <div class="signup-form_header">
+              <p>* Champ obligatoire</p>
+            </div>
+      
+            <div class="form-item signup-form_two-items" >
+              <div>
+                <label for="fname">Prénom: <span aria-hidden="true">*</span></label>
+                <input aria-required="true" class="required-field" type="text" id="fname" name="fname" autocomplete="given-name" >
+                <div class="error-message" id="error-required-name">Le champ prénom est obligatoire</div>
+              </div>
+      
+              <div class="form-item ">
+                <label for="lname">Surnom: <span aria-hidden="true">*</span></label>
+                <input aria-required="true" class="required-field" type="text" id="lname" name="lname"  autocomplete="family-name">
+                <div class="error-message" id="error-required-lname">Le champ surnom est obligatoire</div>
+              </div>
+            </div>
+      
+            <div class="form-item signup-form_address">
+              <div>
+                <label for="addr1">Adresse : </label>
+                <input id="addr1" name="addr1" autocomplete="street-address">
+              </div>
+            </div>
+      
+            <div class="form-item signup-form_code_postal ">
+              <label for="code_postal">Code Postale : <span aria-hidden="true">*</span></label>
+              <input aria-required="true" class="numeric" type="tel" id="code_postal" name="code_postal" maxlength="5" autocomplete="postal-code">
+              <div class="error-message error-required-num" id="error-required-p_cp">Le code postale doit se composer de 5 chiffres</div>
+            </div>
+              
+            <div class="form-item signup-form_country">
+              <label for="country">Pays : <span aria-hidden="true">*</span></label>
+              <select id="country" name="country" required>
+                <option value="france">France</option>
+                <option value="Canada">Canada</option>
+                <option value="USA">Etats-Unis</option>
+                <option value="Italia">Italie</option>
+                <option value="Germany">Allemagne</option>
+              </select>
+            </div>
+            
+            <div class="form-item signup-form_newsletter">
+              <fieldset>
+                <legend>Voulez-vous recevoir notre newsletter mensuelle</legend>
+                <input type="radio" id="yy" name="newsletter" value="yes" checked>
+                <label for="yy">Oui</label>
+                <input type="radio" id="nn" name="newsletter" value="no">
+                <label for="nn">Non</label>
+              </fieldset>
+            </div>
+      
+            <div class="form-item signup-form_remember dn">		
+              <input type="checkbox" id="remember" name="remember" aria-required="true" class="checkbox">
+              <label for="remember">Politique de confidentialité</label>
+              <div class="error-message" id="error-required-privacy">Politique de confidentialité est obligatoire</div>
+            </div>
+          
+            <div class="signup-form_footer">
+              <button type="submit">
+                Envoyer
+                <i class="gg-chevron-double-right" aria-hidden="true"></i>
+              </button>
+            </div>
+        </form>
+    </main>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="script.js"></script>
+</body>
+</html>

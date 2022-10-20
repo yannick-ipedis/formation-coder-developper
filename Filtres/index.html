@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formation Accessibilité Ipedis - Filtres</title>
+</head>
+<body>
+    <header>
+        <h1>Filtres</h1>
+    </header>
+    <main>
+        <ul class="filters">
+            <li><button class="filter" role="menuitemradio" aria-checked="false" data-filter="rouge">ROUGE</button></li>
+            <li><button class="filter" role="menuitemradio" aria-checked="false" data-filter="bleu">BLEU</button></li>
+            <li><button class="filter" role="menuitemradio" aria-checked="false" data-filter="all">TOUS</button></li>
+        </ul>
+    
+        <div id="results" class="results-text" role="status" aria-live="polite">
+            
+        </div>
+        
+        <div class="projects">
+          <div class="project rouge" data-filter="rouge">ROUGE 1</div>
+          <div class="project bleu" data-filter="bleu">BLEU 1</div>
+          <div class="project rouge" data-filter="rouge">ROUGE 2</div>
+          <div class="project hide rouge" data-filter="rouge">ROUGE 3</div>
+          <div class="project bleu" data-filter="bleu">BLEU 2</div>
+          <div class="project rouge" data-filter="rouge">ROUGE 4</div>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

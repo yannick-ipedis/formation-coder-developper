@@ -1,0 +1,150 @@
+header{
+    width: 800px;
+    margin: 0 auto;
+}
+
+#nav-main {
+    display:table;
+    width:100%;
+}
+
+#nav-main > ul {
+    margin: 0;
+    padding: 0;
+    display:flex;
+    background-color: #036;
+    color: #fff;
+}
+#nav-main > ul > li {
+    display:flex;
+    width: 20%;
+    text-align: center;
+    position:relative;
+}
+#nav-main a,
+#nav-main .current {
+    flex:1;
+    display: block;
+    padding: .25em;
+    border-color: #E8E8E8;
+}
+#nav-main a {
+    color: #fff;
+    text-decoration: none;
+border: 1px solid #036;
+}
+#nav-main a:hover,
+#nav-main a:focus {
+    background-color: #fff;
+    color: #036;
+    border: 1px solid #036;
+    text-decoration: underline;
+}
+#nav-main .current {
+    background-color: #bbb;
+    color: #000;
+    border-color: #444;
+}
+
+#nav-main [aria-current=page] {
+background-color: #bbb;
+color: #000;
+border-bottom: .25em solid #44
+}
+
+#nav-main > ul > li > ul {
+display: none;
+position:absolute;
+left:0;
+right:0;
+top:100%;
+padding:0;
+margin:0;
+background-color: #036;
+}
+
+#nav-main > ul > li.open > ul {
+display:block;
+}
+
+#nav-main > ul > li > ul a{
+border-bottom-width: 1px;
+}
+#nav-main .has-submenu > a:after {
+margin-left: 5px;
+line-height: 14px;
+content: '';
+}
+#nav-main .has-submenu:hover > a:hover:after,
+#nav-main .has-submenu > a:focus:after {
+content: '';
+}
+
+#nav-main .has-submenu button {
+background-color: transparent;
+border: none;
+padding:0;
+line-height: 1;
+padding: 3px;
+}
+
+#nav-main .has-submenu button > span {
+display:inline-block;
+background: url(../../img/ex-dropdown-inactive-2084a51c.png) center no-repeat;
+}
+
+#nav-main .has-submenu:hover button > span,
+#nav-main .has-submenu button:focus > span {
+background: url(../../img/ex-dropdown-active-330d8be7.png) #fff;
+}
+
+#nav-main .has-submenu button,
+#nav-main .has-submenu a:focus + button {
+background-color: #036;
+}
+#nav-main .has-submenu:hover button,
+#nav-main .has-submenu button:focus {
+background: #FFF;
+border: 1px solid #036;
+border-left: none;
+}
+
+#nav-main .has-submenu button:hover{
+background: #FFF;
+border: 1px solid #036;
+border-left: none;
+}
+
+.visuallyhidden{
+border: 0;
+clip: rect(0 0 0 0);
+height: 1px;
+margin: -1px;
+overflow: hidden;
+padding: 0;
+position: absolute;
+width: 1px;
+}
+.chevron::before {
+border-style: solid;
+border-width: 0.25em 0.25em 0 0;
+content: '';
+display: inline-block;
+height: 0.45em;
+left: 0.15em;
+position: relative;
+top: 0.15em;
+transform: rotate(-45deg);
+vertical-align: top;
+width: 0.45em;
+top: 0;
+transform: rotate(135deg);
+color:white;
+}
+.chevron:focus::before{
+color:black;
+}
+
+#nav-main a.active{
+text-decoration: underline;
+}

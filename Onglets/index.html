@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Onglets Accessible</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Onglets</h1>
+        <div class="tabs">
+			<h3 id="tablist-1">Les sites d’inspiration pour la conception web</h3>
+			<div role="tablist" aria-labelledby="tablist-1" class="manual tabcontent">
+			   <button id="tab-1" class="tab" type="button" role="tab" aria-selected="true" aria-controls="tabpanel-1">
+			   <span class="focus">Awwwards</span>
+			   </button>
+			   <button id="tab-2" class="tab" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-2" tabindex="-1">
+			   <span class="focus">The FWA (Favorite Website Awards)</span>
+			   </button>
+			   <button id="tab-3" class="tab" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-3" tabindex="-1">
+			   <span class="focus">CSS Design Awards</span>
+			   </button>
+			   <button id="tab-4" class="tab" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-4" tabindex="-1">
+			   <span class="focus">Dribbble</span>
+			   </button>
+			</div>
+			<div id="tabpanel-1" role="tabpanel" aria-labelledby="tab-1" class="tabpanel">
+			   <p><a href="#">Awwwards</a> Awwwards est la référence dans le milieu du design web. En plus d’être une source inépuisable d’inspiration, le site récompense chaque jour les meilleures créations en matière de design d’interface et d’expérience utilisateur. Elle permet notamment aux jeunes designers d’intégrer la plateforme en intégrant le Young Jury Awwwards.</p>
+			</div>
+			<div id="tabpanel-2" role="tabpanel" aria-labelledby="tab-2" class="is-hidden tabpanel">
+			   <p><a href="#">The FWA (Favorite Website Awards)</a> Une seconde plateforme qui récompense les designers, développeurs et agences internationaux dans la conception de site internet. À la manière d’Awwwards et, comme nous allons le voir ensuite, CSS Design Awards.</p>
+			</div>
+			<div id="tabpanel-3" role="tabpanel" aria-labelledby="tab-3" class="is-hidden tabpanel">
+			   <p><a href="#">CSS Design Awards</a> CSS Design Awards complète le trio de tête des sites qui récompensent les professionnels de la conception web.</p>
+			</div>
+			<div id="tabpanel-4" role="tabpanel" aria-labelledby="tab-4" class="is-hidden tabpanel">
+			   <p><a href="#">Dribbble</a> Dribbble est une source d’inspiration riche en contenu basé majoritairement sur le web design. Le site jouit d’une communauté de professionnels importante. Attention à garder un œil critique sur les réalisations qui ne sont parfois que des fantasmes de designers : une accessibilité parfois inexistante et un casse-tête pour les développeurs.</p>
+			</div>
+		 </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
